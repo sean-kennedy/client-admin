@@ -307,8 +307,8 @@ class Client_Admin_Admin {
 		
 		add_settings_section(
 			$this->option_name . '_general',
-			__( 'General', 'client-admin' ),
-			array( $this, $this->option_name . '_general_cb' ),
+			false,
+			false,
 			$this->plugin_name
 		);
 		
@@ -321,21 +321,22 @@ class Client_Admin_Admin {
 			array( 'label_for' => $this->option_name . '_footer_text' )
 		);
 		
-		register_setting( $this->plugin_name, $this->option_name . '_footer_text');
+		add_settings_field(
+			$this->option_name . '_custom_css',
+			__( 'Custom Admin CSS', 'client-admin' ),
+			array( $this, $this->option_name . '_custom_css_cb' ),
+			$this->plugin_name,
+			$this->option_name . '_general',
+			array( 'label_for' => $this->option_name . '_custom_css' )
+		);
+		
+		register_setting( $this->plugin_name, $this->option_name . '_footer_text' );
+		register_setting( $this->plugin_name, $this->option_name . '_custom_css' );
 		
 	}
 	
 	/**
-	 * Render the text for the general section
-	 *
-	 * @since  1.0.0
-	 */
-	public function client_admin_general_cb() {
-		echo '<p>' . __( 'Please change the settings accordingly.', 'client-admin' ) . '</p>';
-	}
-	
-	/**
-	 * Render the treshold day input for this plugin
+	 * Render the footer text input for this plugin
 	 *
 	 * @since  1.0.0
 	 */
@@ -344,6 +345,36 @@ class Client_Admin_Admin {
 		$footer_text = get_option( $this->option_name . '_footer_text' );
 		
 		echo '<input type="text" name="' . $this->option_name . '_footer_text' . '" id="' . $this->option_name . '_footer_text' . '" value="' . esc_html($footer_text) . '">';
+		
+	}
+	
+	/**
+	 * Render the custom css textarea input for this plugin
+	 *
+	 * @since  1.0.0
+	 */
+	public function client_admin_custom_css_cb() {
+		
+		$custom_css = get_option( $this->option_name . '_custom_css' );
+		
+		echo '<textarea name="' . $this->option_name . '_custom_css' . '" id="' . $this->option_name . '_custom_css' . '">' . esc_html($custom_css) . '</textarea>';
+		
+	}
+	
+	/**
+	 * Output custom CSS from settings page to admin
+	 *
+	 * @since  1.0.0
+	 */
+	public function output_custom_css() {
+		
+		$custom_css = get_option( $this->option_name . '_custom_css' );
+		
+		if ($custom_css) {
+			
+			echo '<style>' . $custom_css . '</style>';
+			
+		}
 		
 	}
 

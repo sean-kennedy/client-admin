@@ -4,6 +4,12 @@
 	max-width: 700px;
 }
 
+#client_admin_custom_css {
+	width: 100%;
+	max-width: 700px;
+	height: 200px;
+}
+
 /* Plugin CSS */
 #wp-admin-bar-wp-logo,
 tr.user-url-wrap,

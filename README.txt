@@ -10,5 +10,9 @@ Settings and styles for a minimal Wordpress admin area for clients.
 
 == Changelog ==
 
+= 1.1.0 =
+Added text box to add custom CSS rules
+Updated settings page wording
+
 = 1.0.0 =
 Initial release
