@@ -1,0 +1,33 @@
+/* Settings CSS */
+#client_admin_footer_text {
+	width: 100%;
+	max-width: 700px;
+}
+
+/* Plugin CSS */
+#wp-admin-bar-wp-logo,
+tr.user-url-wrap,
+tr.user-googleplus-wrap,
+tr.user-twitter-wrap,
+tr.user-facebook-wrap,
+tr.user-description-wrap,
+tr.user-rich-editing-wrap,
+tr.user-comment-shortcuts-wrap {
+	display: none;	
+}
+.metabox-holder .postbox-container .empty-container {
+	border: none;
+}
+#dashboard-widgets-wrap {
+	overflow: visible;
+}
+.admin-color-midnight .acf-button.blue {
+	background: #e14d43 none repeat scroll 0 0;
+	border-color: #d02c21;
+	box-shadow: 0 1px 0 #ec8b85 inset, 0 1px 0 rgba(0, 0, 0, 0.15);
+	color: #fff;	
+}
+.admin-color-midnight .acf-fc-popup ul li a:hover {
+	background: #e14d43;
+	text-shadow: #ec8b85 0 1px 0;
+}

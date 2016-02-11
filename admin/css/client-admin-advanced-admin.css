@@ -1,0 +1,14 @@
+body.client_admin_hide_advanced_settings #menu-appearance,
+body.client_admin_hide_advanced_settings #menu-plugins,
+body.client_admin_hide_advanced_settings #menu-settings,
+body.client_admin_hide_advanced_settings #menu-tools,
+body.client_admin_hide_advanced_settings #toplevel_page_edit-post_type-acf-field-group,
+body.client_admin_hide_advanced_settings #toplevel_page_wpseo_dashboard,
+body.client_admin_hide_advanced_settings #wp-admin-bar-wpseo-menu,
+body.client_admin_hide_advanced_settings #toplevel_page_itsec,
+body.client_admin_hide_advanced_settings #wp-admin-bar-itsec_admin_bar_menu,
+body.client_admin_hide_advanced_settings h3#wordpress-seo,
+body.client_admin_hide_advanced_settings h3#wordpress-seo + .form-table,
+body.client_admin_hide_advanced_settings tr.user-admin-color-wrap {
+	display: none!important;
+}
