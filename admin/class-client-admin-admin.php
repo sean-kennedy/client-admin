@@ -351,7 +351,7 @@ class Client_Admin_Admin {
 	/**
 	 * Render the custom css textarea input for this plugin
 	 *
-	 * @since  1.0.0
+	 * @since  1.1.0
 	 */
 	public function client_admin_custom_css_cb() {
 		
@@ -364,7 +364,7 @@ class Client_Admin_Admin {
 	/**
 	 * Output custom CSS from settings page to admin
 	 *
-	 * @since  1.0.0
+	 * @since  1.1.0
 	 */
 	public function output_custom_css() {
 		
@@ -376,6 +376,21 @@ class Client_Admin_Admin {
 			
 		}
 		
+	}
+
+	/**
+	 * Settings link on Plugin page
+	 *
+	 * @since  1.1.2
+	 */
+	public function add_plugin_action_links( $links ) {
+		
+		$settings = array('settings' => '<a href="options-general.php?page=client-admin">' . __('Settings', 'General') . '</a>');
+		
+		$links = array_merge($settings, $links);
+		
+		return $links;
+	   
 	}
 
 	/**

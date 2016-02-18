@@ -69,7 +69,7 @@ class Client_Admin {
 	public function __construct() {
 
 		$this->plugin_name = 'client-admin';
-		$this->version = '1.1.1';
+		$this->version = '1.1.2';
 
 		$this->load_dependencies();
 		$this->define_admin_hooks();
@@ -140,6 +140,8 @@ class Client_Admin {
 		$this->loader->add_action( 'tiny_mce_before_init', $plugin_admin, 'tinymce_force_toolbar_toggle' );
 		$this->loader->add_action( 'wp_dashboard_setup', $plugin_admin, 'dashboard_cleanup' );
 		$this->loader->add_action( 'admin_footer_text', $plugin_admin, 'custom_admin_footer_text' );
+		
+		$this->loader->add_action( 'plugin_action_links_client-admin/client-admin.php', $plugin_admin, 'add_plugin_action_links' );
 		
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
