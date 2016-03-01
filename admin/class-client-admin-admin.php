@@ -88,9 +88,9 @@ class Client_Admin_Admin {
 		$show_advanced = get_user_meta(get_current_user_id(), $this->option_name . '_show_advanced_settings', true);
 		
 		if ($show_advanced) {
-			$classes .= $this->option_name . '_show_advanced_settings';
+			$classes .= ' ' . $this->option_name . '_show_advanced_settings';
 		} else {
-			$classes .= $this->option_name . '_hide_advanced_settings';
+			$classes .= ' ' . $this->option_name . '_hide_advanced_settings';
 		}
 		
 		return $classes;
