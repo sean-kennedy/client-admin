@@ -69,7 +69,7 @@ class Client_Admin {
 	public function __construct() {
 
 		$this->plugin_name = 'client-admin';
-		$this->version = '1.1.3';
+		$this->version = '1.1.4';
 
 		$this->load_dependencies();
 		$this->define_admin_hooks();
@@ -129,6 +129,7 @@ class Client_Admin {
 		
 		$this->loader->add_action( 'admin_footer', $plugin_admin, 'output_custom_css' );
 		$this->loader->add_action( 'admin_body_class', $plugin_admin, 'add_advanced_settings_body_class' );
+		$this->loader->add_action( 'admin_body_class', $plugin_admin, 'add_user_role_body_class' );
 		$this->loader->add_action( 'personal_options', $plugin_admin, 'add_advanced_settings_field_to_user_profile' );
 		$this->loader->add_action( 'personal_options_update', $plugin_admin, 'advanced_settings_field_to_user_profile_update' );
 		$this->loader->add_action( 'edit_user_profile_update', $plugin_admin, 'advanced_settings_field_to_user_profile_update' );

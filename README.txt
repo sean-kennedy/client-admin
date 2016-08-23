@@ -2,7 +2,7 @@
 Tags: client, admin
 Requires at least: 4.4.0
 Tested up to: 4.4.2
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,9 @@ Released under the terms of the GNU General Public License.
 Settings and styles for a minimal Wordpress admin area for clients.
 
 == Changelog ==
+
+= 1.1.4 =
+* Added user role to body class
 
 = 1.1.3 =
 * Added space to body classes for admin area

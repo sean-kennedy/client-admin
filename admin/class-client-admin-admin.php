@@ -83,6 +83,11 @@ class Client_Admin_Admin {
 
 	}
 	
+	/**
+	 * Add advanced settings as body class
+	 *
+	 * @since  1.0.0
+	 */
 	public function add_advanced_settings_body_class( $classes ) {
 		
 		$show_advanced = get_user_meta(get_current_user_id(), $this->option_name . '_show_advanced_settings', true);
@@ -94,6 +99,26 @@ class Client_Admin_Admin {
 		}
 		
 		return $classes;
+		
+	}
+	
+	/**
+	 * Add user role as body class
+	 *
+	 * @since  1.1.4
+	 */
+	public function add_user_role_body_class( $classes ) {
+		
+    	if (is_admin()) {
+		
+            $current_user = new WP_User(get_current_user_id());
+            $user_role = array_shift($current_user->roles);
+            
+            $classes .= ' user-role-'. $user_role;
+        
+        }
+
+        return $classes;
 		
 	}
 	
