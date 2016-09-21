@@ -69,7 +69,7 @@ class Client_Admin {
 	public function __construct() {
 
 		$this->plugin_name = 'client-admin';
-		$this->version = '1.1.4';
+		$this->version = '1.1.5';
 
 		$this->load_dependencies();
 		$this->define_admin_hooks();

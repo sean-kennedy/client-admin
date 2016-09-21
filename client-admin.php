@@ -16,7 +16,7 @@
  * Plugin Name:       Client Admin
  * Plugin URI:        https://github.com/sean-kennedy/client-admin/
  * Description:       Settings and styles for a minimal Wordpress admin area for clients.
- * Version:           1.1.4
+ * Version:           1.1.5
  * Author:            Sean Kennedy
  * Author URI:        https://seankennedy.com.au/
  * License:           GPL-2.0+
